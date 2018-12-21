@@ -71,7 +71,7 @@ def telegram():
         
         # 사진을 네이버 유명인 인식 api로 넘겨주기
         file = requests.get(file_url, stream=True)
-        
+        papago = requests.post("https://openapi.naver.com/v1/papago/n2mt",
                     headers = {
                         "X-Naver-Client-Id":naver_client_id,
                         "X-Naver-Client-Secret":naver_client_secret
